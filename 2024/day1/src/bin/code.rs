@@ -34,11 +34,10 @@ fn main() -> io::Result<()> {
             eprintln!("Invalid line format: {}", line);
         }
     }
-
+    println!("{:?}", &a_value);
     let d = diff(a_value, b_value);
 
     let sum: i32 = d.iter().sum();
-
     println!("{:?}", sum);
 
     Ok(())
